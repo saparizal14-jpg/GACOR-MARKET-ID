@@ -1,81 +1,138 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gacor Market ID</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gacor Market ID</title>
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            color: white;
-            text-align: center;
-            
-            background: url('https://images.unsplash.com/photo-1642790551116-18e3cdb8f5d5') no-repeat center center/cover;
-            height: 100vh;
-        }
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
 
-        .overlay {
-            background: rgba(0,0,0,0.75);
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
+body {
+    height: 100vh;
+    background: black;
+    overflow: hidden;
+    color: white;
+}
 
-        h1 {
-            font-size: 42px;
-            letter-spacing: 2px;
-        }
+/* Background chart animasi */
+body::before {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: url('https://images.unsplash.com/photo-1642790551116-18e3cdb8f5d5');
+    background-size: cover;
+    opacity: 0.25;
+    animation: moveBg 20s linear infinite;
+}
 
-        p {
-            font-size: 18px;
-            opacity: 0.9;
-        }
+@keyframes moveBg {
+    0% {transform: translate(0,0);}
+    50% {transform: translate(-10%, -10%);}
+    100% {transform: translate(0,0);}
+}
 
-        .btn {
-            margin: 12px;
-            padding: 15px 28px;
-            font-size: 18px;
-            border: none;
-            border-radius: 12px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
+/* Overlay */
+.container {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-        .btn:hover {
-            transform: scale(1.05);
-        }
+/* Box utama */
+.card {
+    background: rgba(0,0,0,0.7);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 40px rgba(255,215,0,0.3);
+}
 
-        .telegram {
-            background: #0088cc;
-            color: white;
-        }
+/* Judul */
+h1 {
+    font-size: 40px;
+    color: gold;
+    margin-bottom: 10px;
+}
 
-        .affiliate {
-            background: gold;
-            color: black;
-        }
-    </style>
+p {
+    margin-bottom: 25px;
+    opacity: 0.85;
+}
+
+/* Tombol */
+.btn {
+    display: block;
+    margin: 10px auto;
+    padding: 15px;
+    width: 260px;
+    border: none;
+    border-radius: 12px;
+    font-size: 17px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.07);
+}
+
+/* Warna tombol */
+.telegram {
+    background: #0088cc;
+}
+
+.affiliate {
+    background: gold;
+    color: black;
+    font-weight: bold;
+}
+
+.instagram {
+    background: #e1306c;
+}
+
+/* Glow efek */
+.btn {
+    box-shadow: 0 0 15px rgba(255,255,255,0.2);
+}
+
+</style>
 </head>
 
 <body>
 
-<div class="overlay">
-    <h1>💸 GACOR MARKET ID</h1>
-    <p>Belajar trading dari nol & mulai perjalanan profit kamu</p>
+<div class="container">
+    <div class="card">
+        <h1>💸 GACOR MARKET ID</h1>
+        <p>Komunitas trading untuk pemula sampai profit</p>
 
-    <!-- Tombol Telegram -->
-    <a href="https://t.me/heruzxl" target="_blank">
-        <button class="btn telegram">Gabung Komunitas Telegram</button>
-    </a>
+        <!-- Telegram -->
+        <a href="https://t.me/USERNAMEKAMU" target="_blank">
+            <button class="btn telegram">Gabung Telegram</button>
+        </a>
 
-    <!-- Tombol Afiliasi -->
-    <a href="https://linkafiliasikamu.com" target="_blank">
-        <button class="btn affiliate">Mulai Trading (Daftar)</button>
-    </a>
+        <!-- Afiliasi -->
+        <a href="https://linkafiliasikamu.com" target="_blank">
+            <button class="btn affiliate">Mulai Trading Sekarang</button>
+        </a>
 
+        <!-- Instagram -->
+        <a href="https://instagram.com/USERNAMEIGKAMU" target="_blank">
+            <button class="btn instagram">Follow Instagram</button>
+        </a>
+
+    </div>
 </div>
 
 </body>
